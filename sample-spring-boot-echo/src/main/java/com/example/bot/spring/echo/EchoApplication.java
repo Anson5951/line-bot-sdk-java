@@ -35,10 +35,10 @@ public class EchoApplication {
     }
 
     @EventMapping
-    public Message handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
+    public void handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
-        final String originalMessageText = event.getMessage().getText();
-        return new TextMessage(originalMessageText);
+        //final String originalMessageText = event.getMessage().getText();
+        //return new TextMessage(originalMessageText);
     }
 
     @EventMapping
